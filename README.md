@@ -9,27 +9,18 @@ Python script that parses a Cisco IOS configuration file and generates a report 
 
 ## Usage ##
 ```
-./myriad-ssh.py
+./cisco-ios-audit.py ConfigFile
 ```
 
 ## Example ##
 1. Run the script
   ```
-  ./myriad-ssh.py
+  ./cisco-ios-audit.py ConfigFile
   ```
 
-2. Enter the necessary details
-  ```
-  Enter username: uname
-  Password: pass
-  Enter the remote command: date && uname -a
-  Enter the serverlist file:/home/uname/serverlistfile
-  ```
-  > Note: Server list file contains the server hostnames/IPs written in one column
-
-3. Progress and Output
-  ```
-  Total number of servers: 5
-  Progress: 80%............Done
-  ```
-  Output file: **myriad-ssh-log.csv**
+Notes:
+-Ensure that the configuration files doesn't have 2 consecutive blank lines as it introduces inaccurate results.
+    This sed command could be used to remove blank lines in the config file. sed -i '/^\s*$/d' ConfigFile
+-Rename configuration files with bad format.
+     sample - 2015.05.25 07.23 switch.txt. This should be renamed to switch.txt.
+-Use "for loop" for multiple configuration files
