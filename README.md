@@ -19,8 +19,8 @@ Python script that parses a Cisco IOS configuration file and generates a report 
   ```
 
 Notes:
-* Ensure that the configuration files doesn't have 2 consecutive blank lines as it introduces inaccurate results.
-    This sed command could be used to remove blank lines in the config file. sed -i '/^\s*$/d' ConfigFile
+* Ensure that the configuration files don't have 2 consecutive blank lines as it introduces inaccurate results.
+    * This sed command could be used to remove blank lines in the config file. `sed -i '/^\s*$/d' ConfigFile`
 * Rename configuration files with bad format.
-     sample - 2015.05.25 07.23 switch.txt. This should be renamed to switch.txt.
+     * Sample - `2015.05.25 07.23 switch.txt`. This should be renamed to `switch.txt`.
 * Use "for loop" for multiple configuration files
