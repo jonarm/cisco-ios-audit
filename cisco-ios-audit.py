@@ -2,7 +2,7 @@
 
 # cisco-ios-audit parses a Cisco IOS configuration file and generates a report 
 # to efficiently perform an IT Security Audit
-# Copyright: (c) 2015 Jonar Marzan.
+# Copyright: (c) 2015 Jonar M.
 # License: BSD, see LICENSE for more details.
 
 from ciscoconfparse import CiscoConfParse
